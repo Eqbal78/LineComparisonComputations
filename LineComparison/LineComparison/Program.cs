@@ -6,21 +6,39 @@ namespace LineComparison
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" Welcom to Line Comparison Computation.");
+            Console.WriteLine("Welcome to Line Comparison Computation.");
 
-
-            Console.WriteLine("Enter the value of x1 : ");
+            Console.WriteLine("Enter values x1 and y1 for Line 1");
+            Console.WriteLine("Enter values x1 for Line 1");
             int x1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the value of y1 : ");
+            Console.WriteLine("Enter values y1 for Line 1");
             int y1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the value of x2 : ");
+
+            Console.WriteLine("Enter values x2 and y2 for Line 1");
+            Console.WriteLine("Enter values x2 for Line 1");
             int x2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the value of y2 : ");
+            Console.WriteLine("Enter values y2 for Line 1");
             int y2 = Convert.ToInt32(Console.ReadLine());
 
-            double length_of_line = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
 
-            Console.WriteLine("The Length of 2 Points(" + x1 + "," + y1 + ") and (" + x2 + "," + y2 + ") is " + length_of_line);
+            Console.WriteLine("Enter values x3 and y3 for Line 2");
+            Console.WriteLine("Enter values x3 for Line 2");
+            int x3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter values y3 for Line 2");
+            int y3 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter values x4 and y4 for Line 2");
+            Console.WriteLine("Enter values x4 for Line 2");
+            int x4 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter values y4 for Line 2");
+            int y4 = Convert.ToInt32(Console.ReadLine());
+            double length_of_line1 = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            double length_of_line2 = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
+
+            if (length_of_line1.Equals(length_of_line2))
+                Console.WriteLine("Lines are equal in length.");
+            else
+                Console.WriteLine("Lines are not equal in length.");
         }
     }
 }
