@@ -4,7 +4,7 @@ namespace LineComparison
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Compare()
         {
             Console.WriteLine("Welcome to Line Comparison Computation.");
 
@@ -36,12 +36,19 @@ namespace LineComparison
             double length_of_line2 = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
 
             int line_difference = length_of_line1.CompareTo(length_of_line2);
+
             if (line_difference == 0)
                 Console.WriteLine("Lines are equal in length");
             else if (line_difference > 0)
                 Console.WriteLine("Line1 is greater in length than Line2");
             else
                 Console.WriteLine("Line1 is smaller in length than Line2");
+
+            return line_difference;
+        }
+        static void Main(string[] args)
+        {
+            Compare();
         }
     }
 }
